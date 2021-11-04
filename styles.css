@@ -1,0 +1,39 @@
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+
+.navbar{
+    background-color: #535474;
+    padding: 10px 15px;
+    color: white;
+}
+
+.navbar-brand{
+    font-size: 2.2rem;
+}
+
+/* make the search bar go to the end of nav bar */
+input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    border: 1px solid #ccc;
+}
+
+.submissionfield {
+    height: 500px;
+    width: 1000px;
+    border: 1px solid #999999; 
+    padding: 10%; 
+    margin: 0;
+}
+
+.center {
+    margin: 0;
+    width: 60%;
+    border: 5px solid #FFFF00;
+    padding: 10px;
+}
