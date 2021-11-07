@@ -10,10 +10,11 @@ body{
 
 .navbar-brand{
     font-size: 2.2rem;
+    padding-left: 20px;
 }
 
 /* make the search bar go to the end of nav bar */
-input[type=text] { 
+.searchBar { 
     float: right;
     padding: 6px;
     border: none;
@@ -31,3 +32,7 @@ input[type=text] {
     margin: 0;
 }
 
+.center{
+    width: auto;
+    height:auto;
+}
