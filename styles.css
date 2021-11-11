@@ -13,8 +13,8 @@ body{
 }
 
 .checkmark {
-    width: 56px;
-    height: 56px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     display: block;
     stroke-width: 2;
@@ -47,7 +47,7 @@ body{
 }
 @keyframes fill {
     100% {
-        box-shadow: inset 0px 0px 0px 30px #7ac142;
+        box-shadow: inset 0px 0px 0px 80px #7ac142;
     }
 }
 
