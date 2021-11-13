@@ -26,9 +26,9 @@ body{
 
 .numberCircle {
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
 
     color: #fff;
     text-align: center;
@@ -55,7 +55,7 @@ body{
     border-top: 13px solid transparent;
     border-bottom: 13px solid transparent;
 
-    border-left: 13px solid #C4C4C4;
+    border-left: 15px solid #C4C4C4;
 
     float: left;
 
@@ -146,6 +146,17 @@ body{
     justify-content: center;
     padding-top: 1%;
     padding-bottom: 1%;
+}
+
+.message-text{
+    text-align: center;
+    justify-content: center;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .container {
