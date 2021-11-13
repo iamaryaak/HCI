@@ -2,6 +2,67 @@ body{
     font-family: 'Work Sans', sans-serif;
 }
 
+/*mobile styles*/
+.progress {
+    margin-top: 30px;
+    margin-bottom: 8px;
+    height: 38px;
+    width: 100%;
+    padding: 3px;
+    padding-left: 10px;
+    background-color: #fff;
+}
+
+.progress-text {
+    color: #535474;
+    width: 120px;
+
+    font-family: 'Work Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+
+    float: left;
+}
+
+.numberCircle {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+
+    color: #fff;
+    text-align: center;
+
+    font-family: 'Work Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+
+    margin-left: 10px;
+    margin-right: 10px;
+
+    float: left
+}
+.blue {
+    background: #535474;
+}
+.grey {
+    background: #C4C4C4;
+}
+
+.arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+
+    border-left: 13px solid #C4C4C4;
+
+    float: left;
+
+    margin-left: 5px;
+}
+
+
 .checkmark__circle {
     stroke-dasharray: 166;
     stroke-dashoffset: 166;
