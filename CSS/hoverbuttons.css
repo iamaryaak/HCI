@@ -992,7 +992,7 @@
 .hbtn.hb-fill-bottom-rev-br:before {
     position: absolute;
     content: '';
-    background: #ffffff;
+    background: #0a58ca;
     transition-duration: .3s;
     z-index: -1;
     top: 0;
@@ -1002,7 +1002,7 @@
     width: 100%;
     height: 100%;
     opacity: 1;
-    border: solid 2px #ffffff;
+    border: solid 2px #0a58ca;
 }
 
 .hbtn.hb-fill-bottom-rev-br:hover:before {
@@ -1137,14 +1137,14 @@
 
 .hb-fill-top-rev-br, .hb-fill-right-rev-br, .hb-fill-bottom-rev-br, .hb-fill-left-rev-br, .hb-fill-on-rev-br, .hb-fill-middle-rev-br, .hb-fill-middle2-rev-br {
     background: #ffffff;
-    color: #000000;
+    color: #ffffff;
     transition: color 0.3s ease,
     background 0s 0.3s ease;
 }
 
 .hb-fill-top-rev-br:hover, .hb-fill-right-rev-br:hover, .hb-fill-bottom-rev-br:hover, .hb-fill-left-rev-br:hover, .hb-fill-on-rev-br:hover, .hb-fill-middle-rev-br:hover, .hb-fill-middle2-rev-br:hover {
     background: transparent;
-    color: #ffffff;
+    color: #130d0d;
     transition: color 0.3s ease,
     background 0s ease;
 }

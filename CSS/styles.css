@@ -2,6 +2,11 @@ body{
     font-family: 'Work Sans', sans-serif;
 }
 
+
+.checkmark_block{
+    padding-bottom: 10px;
+}
+
 /*mobile styles*/
 .progress {
     margin-top: 30px;
@@ -154,9 +159,8 @@ body{
     font-family: 'Work Sans', sans-serif;
     font-size: 30px;
     font-weight: 800;
-
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .container {
