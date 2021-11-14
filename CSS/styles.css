@@ -1,0 +1,330 @@
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+
+/*mobile styles*/
+.progress {
+    margin-top: 30px;
+    margin-bottom: 8px;
+    height: 38px;
+    width: 100%;
+    padding: 3px;
+    padding-left: 10px;
+    background-color: #fff;
+}
+
+.progress-text {
+    color: #535474;
+    width: 120px;
+
+    font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+
+    float: left;
+}
+
+.numberCircle {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+
+    color: #fff;
+    text-align: center;
+
+    font-family: 'Work Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+
+    margin-left: 10px;
+    margin-right: 10px;
+
+    float: left
+}
+.blue {
+    background: #535474;
+}
+.grey {
+    background: #C4C4C4;
+}
+
+.arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+
+    border-left: 15px solid #C4C4C4;
+
+    float: left;
+
+    margin-left: 5px;
+}
+
+
+.checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #7ac142;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    margin: 1% auto;
+    box-shadow: inset 0px 0px 0px #7ac142;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+.checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes scale {
+    0%, 100% {
+        transform: none;
+    }
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 80px #7ac142;
+    }
+}
+
+
+.navbar{
+    background-color: #535474;
+    padding: 10px 15px;
+    color: white;
+}
+
+.navbar-brand{
+    font-size: 2.2rem;
+    padding-left: 20px;
+}
+
+/* make the search bar go to the end of nav bar */
+.searchBar {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    border: 1px solid #ccc;
+}
+
+.submissionfield {
+    padding: 10px;
+    height: 500px;
+    width: 800px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.message-text{
+    text-align: center;
+    justify-content: center;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.container {
+    width: 600px;
+    margin: 100px auto;
+}
+.progressbar {
+    counter-reset: step;
+}
+.progressbar li {
+    list-style-type: none;
+    width: 25%;
+    float: left;
+    font-size: 18px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    color: #7d7d7d;
+}
+.progressbar li:before {
+    width: 30px;
+    height: 30px;
+    content: counter(step);
+    counter-increment: step;
+    line-height: 30px;
+    border: 2px solid #7d7d7d;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    background-color: white;
+}
+.progressbar li:after {
+    width: 100%;
+    height: 2px;
+    content: '';
+    position: absolute;
+    background-color: #7d7d7d;
+    top: 15px;
+    left: -50%;
+    z-index: -1;
+}
+.progressbar li:first-child:after {
+    content: none;
+}
+.progressbar li.active {
+    color: green;
+}
+.progressbar li.active:before {
+    border-color: #55b776;
+}
+.progressbar li.active + li:after {
+    background-color: #55b776;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+
+  .sub-head {
+    color: grey;
+    font-size: 18px;
+  }
+
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #535474;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .card button:hover {
+    opacity: 0.7;
+  }
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #535474;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: #535474 ;}
+
+p,
+label {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input {
+    margin: .4rem;
+}
+
+.next_button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .next_button1 {background-color: #535474 ;}
+
+  .next_button1:hover {
+    background-color: #54A4AF;
+    color: white;
+  }
+
+  .card-wrapper {
+      position: relative;
+      width: 50vw;
+      display: grid;
+      grid-template-columns: auto auto;
+      column-gap: 20px;
+      left: 20vw;
+  }
+  .card {
+      position: relative;
+      width: 100%;
+  }
+
+  #next-btn {
+      position: absolute;
+      left: 93%;
+  }
