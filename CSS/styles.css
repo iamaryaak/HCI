@@ -6,6 +6,11 @@ body{
 .checkmark_block{
     padding-bottom: 10px;
 }
+.set_of_buttons {
+    padding-top: 30px;
+    text-align: center;
+
+}
 
 /*mobile styles*/
 .progress {
@@ -169,6 +174,10 @@ body{
 }
 .progressbar {
     counter-reset: step;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 130px;
+
 }
 .progressbar li {
     list-style-type: none;
