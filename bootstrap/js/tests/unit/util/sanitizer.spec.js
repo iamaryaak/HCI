@@ -13,14 +13,14 @@ describe('Sanitizer', () => {
     it('should sanitize template by removing tags with XSS', () => {
       const template = [
         '<div>',
-        '  <a href="javascript:alert(7)">Click me</a>',
+        '  <a href="js:alert(7)">Click me</a>',
         '  <span>Some content</span>',
         '</div>'
       ].join('')
 
       const result = sanitizeHtml(template, DefaultAllowlist, null)
 
-      expect(result).not.toContain('href="javascript:alert(7)')
+      expect(result).not.toContain('href="js:alert(7)')
     })
 
     it('should allow aria attributes and safe attributes', () => {
