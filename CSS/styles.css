@@ -3,6 +3,20 @@ body{
 }
 
 
+.parallax {
+    /* The image used */
+
+    /* Full height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 .checkmark_block{
     padding-bottom: 10px;
 }
@@ -155,7 +169,7 @@ body{
     display: flex;
     justify-content: center;
     padding-top: 3%;
-    padding-bottom: 1%;
+    padding-bottom: 3%;
 }
 
 .message-text{
