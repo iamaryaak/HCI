@@ -154,7 +154,7 @@ body{
 .container{
     display: flex;
     justify-content: center;
-    padding-top: 1%;
+    padding-top: 3%;
     padding-bottom: 1%;
 }
 
@@ -168,16 +168,12 @@ body{
     margin-right: 20px;
 }
 
-.container {
-    width: 600px;
-    margin: 100px auto;
-}
+
 .progressbar {
     counter-reset: step;
     text-align: center;
     padding-top: 50px;
     padding-bottom: 130px;
-    align-items: flex-start;
 
 }
 .progressbar li {
