@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="test.js"></script>
     <title>Minerva</title>
 </head>
 <body>
@@ -23,39 +22,35 @@
         Minerva
         </a>
     </div>
-    <div>
-        <input class="searchBar" type="text" placeholder="Search...">
+    <!-- Minimal Search Bar -->
+    <div class="container">
+      <input type="text" placeholder="Search...">
     </div>
   </nav>
-  <div>
-    <ul class="cdt-step-progressbar horizontal">
-        <li>
-          <span class="indicator">1</span>
-          <span class="title">Item1</span>
-        </li>
-        <li>
-          <span class="indicator">2</span>
-          <span class="title">Item 2</span>
-        </li>
-        <li>
-          <span class="indicator">3</span>
-          <span class="title">Item 3</span>
-        </li>
-        <li>
-          <span class="indicator">4</span>
-          <span class="title">Item 4</span>
-        </li>
-        <li>
-          <span class="indicator">5</span>
-          <span class="title">Item 5</span>
-        </li>
-      </ul>
+
+  <div class = "progress">
+    <div class = "numberCircle blue"> 1 </div>
+    <div class = "progress-text">Input Text</div>
+    <div class = "arrow-right"></div>
+    <div class = "numberCircle grey"> 2 </div>
+    <div class = "arrow-right"></div>
+    <div class = "numberCircle grey"> 3 </div>
   </div>
+
   <!--text input form-->
-  <div class="container">
-    <form style="margin: auto;">
+  <div class = "center">
+    <form>
       <input type="text" class = "submissionfield" placeholder="Type or copy/paste the text that you would like scaffolded...">
     </form> 
   </div>
+
+  <div class="button">
+    IMPORT TEXT
+  </div>  
+  <div class="button button-fill">
+    NEXT
+  </div>
+
+  
 </body>
 </html>
