@@ -3,9 +3,7 @@ body{
 }
 
 
-.checkmark_block{
-    padding-bottom: 10px;
-}
+
 .set_of_buttons {
     padding-top: 30px;
     text-align: center;
@@ -73,7 +71,9 @@ body{
 }
 
 /*Checkmark CSS*/
-
+.checkmark_block{
+    padding-bottom: 10px;
+}
 .checkmark__circle {
     stroke-dasharray: 166;
     stroke-dashoffset: 166;
