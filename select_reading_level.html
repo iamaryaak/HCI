@@ -1,0 +1,101 @@
+<!-- Boiler plate code for each page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="test.js"></script>
+    <title>Minerva</title>
+</head>
+<body>
+ <!-- Navigation Bar -->
+   <nav class="navbar topnav">
+    <!-- Image and text -->
+    <div class = "navbar-brand">
+      <a class="navbar-brand">
+        <a href="index.html"><img src="images/owlLogo.png" width="50" height="50" class="d-inline-block align-top" alt="">
+        Minerva
+        </a>
+        </a>
+        <div class="topnav-right">
+          <a href="how_to.html">How to Use</a>
+          <input class="searchBar" type="text" placeholder="Search...">
+        </div>
+      </div>
+  </nav>
+
+  <div class="container">
+    <ul class="progressbar">
+        <li>Enter Text</li>
+        <li class="active">Select Reading Level</li>
+        <li>Hand Out Documents</li>
+    </ul>
+  </div>
+
+  <div class="card-wrapper">
+    <div class="card">
+      <h3>READING 215</h3>
+      <p class="sub-head">Tuesday 5 PM</p>
+      <p>Class Details</p>
+      <p><button>Select Class</button></p>
+    </div>
+    <div class="card">
+      <h3>ESL</h3>
+      <p class="sub-head">Wednesday 3 PM</p>
+      <p>Class Details</p>
+      <p><button>Select Class</button></p>
+    </div>
+  </div>
+
+  <div>
+    <p>Set Scafholding Level to ..</p>
+    <input type="radio" id="huey" name="drone" value="huey"
+           checked>
+    <label for="huey">Lower reading level of students by <div class="dropdown">
+      <button class="dropbtn">Reading Level</button>
+      <div class="dropdown-content">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+      </div>
+    </div> </label>
+  </div>
+
+  <div>
+    <input type="radio" id="huey" name="drone" value="huey"
+           checked>
+    <label for="huey">Keep the same reading level  </label>
+  </div>
+
+  <div>
+    <input type="radio" id="huey" name="drone" value="huey"
+           checked>
+    <label for="huey">Raise reading level of students by <div class="dropdown">
+      <button class="dropbtn">Reading Level</button>
+      <div class="dropdown-content">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+      </div>
+    </div> </label>
+  </div>
+
+  <!--<a href="starting_page.html"><button id="next-btn"  class="next_button next_button1">Next</button></a>--->
+  <!--<div class="button button-fill float-right">
+    NEXT
+  </div>
+
+  <!--New button, to keep same, change to print pages-->
+  <a href="select_reading_level.html"><button id="next-btn" class="next_button next_button1 button-fill float-right">Next</button></a>
+
+
+</body>
+
+</html>

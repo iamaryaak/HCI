@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="test.js"></script>
+    <title>Minerva</title>
+
+<style>
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0rem;
+}
+
+.header {
+  background-color: #535474;
+  width: 100%;
+  height: 60px;
+}
+
+  .header-text {
+    color: #fff;
+    font-family: 'Work Sans', sans-serif;
+    width: 215px;
+    float: left;
+    margin-left: 5px;
+    font-size: 40px;
+    margin-top: 3px;
+  }
+
+  .header-search {
+    color: #fff;
+    font-family: 'Work Sans', sans-serif;
+    border: 1px solid red;
+    width: 72px;
+    float: right;
+    height: 34px;
+    font-size: 50px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+
+    text-align: center;
+    line-height: 30px;
+    margin-top: 15px;
+    margin-right: 30px;
+  }
+
+.progress {
+  margin-top: 30px;
+  margin-bottom: 8px;
+  height: 38px;
+  width: 100%;
+  padding: 3px;
+  padding-left: 10px;
+  background-color: #fff;
+}
+
+.progress-text {
+  color: #535474;
+  width: 120px;
+
+  font-family: 'Work Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+
+  float: left;
+}
+
+.numberCircle {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+
+    color: #fff;
+    text-align: center;
+
+    font-family: 'Work Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+
+    margin-left: 10px;
+    margin-right: 10px;
+
+    float: left
+}
+  .blue {
+    background: #535474;
+  }
+  .grey {
+    background: #C4C4C4;
+  }
+
+.arrow-right {
+  width: 0; 
+  height: 0; 
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
+  
+  border-left: 13px solid #C4C4C4;
+
+  float: left;
+  
+  margin-left: 5px;
+}
+
+.scaffold {
+  width: 332px;
+  height: 410px;
+  border-radius: 10px;
+
+  border: 3px solid #535474;
+  margin-left: 8px;
+
+  font-family: 'Work Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  color: #535474;
+}
+
+.red-border {
+  border: 1px solid red;
+}
+
+.button {
+  width: 130px;
+  height: 53px;
+  border-radius: 8px;
+
+  border: 3px solid #54A4AF;
+
+  text-align: center;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 1000;
+  color: #54A4AF;
+
+  float: left;
+  margin-left: 17px;
+  margin-top: 5px;
+
+}
+
+  .button-fill {
+    background-color: #54A4AF;
+    color: #fff !important;
+    margin-left: 55px !important;
+  }
+
+</style>
+
+
+</head>
+<body>
+
+  <div class = "header">
+    <div class = "header-text">
+      <img src="images/owlLogo.png" width="48" height="48" class="d-inline-block align-top" alt="">
+      Minerva
+    </div>
+    <div class = "header-search">
+      &#8981;
+    </div>
+  </div>
+
+  <div class = "progress">
+    <div class = "numberCircle blue"> 1 </div>
+    <div class = "progress-text">Enter text</div>
+    <div class = "arrow-right"></div>
+    <div class = "numberCircle grey"> 2 </div>
+    <div class = "arrow-right"></div>
+    <div class = "numberCircle grey"> 3 </div>
+  </div>
+
+  <div class="scaffold-input">
+    <textarea class="scaffold" placeholder="Type or paste the text you would like scaffolded..."></textarea>
+  </div>
+
+  <div class="button">
+      IMPORT TEXT
+  </div>  
+  <div class="button button-fill">
+      NEXT
+  </div>
+
+
+</body>
+</html>
