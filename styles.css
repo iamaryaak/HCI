@@ -32,16 +32,42 @@ body{
     margin: 0;
 }
 
-.container{
+.topnav-right {
+    position: absolute;
+    padding-left: 60%;
+}
+
+.searchcontainer{
     display: flex;
     justify-content: center;
     padding-top: 1%;
     padding-bottom: 1%;
 }
 
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  /* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
 .container {
     width: 600px;
-    margin: 100px auto;
+    margin: 20px auto;
 }
 .progressbar {
     counter-reset: step;
@@ -65,10 +91,16 @@ body{
     border: 2px solid #7d7d7d;
     display: block;
     text-align: center;
-    margin: 0 auto 10px auto;
+    margin: 0 auto 0 auto;
     border-radius: 50%;
     background-color: white;
 }
+
+.centerInput {
+    display: flex;
+    justify-content: center;
+}
+
 .progressbar li:after {
     width: 100%;
     height: 2px;
@@ -172,10 +204,11 @@ input {
     margin: .4rem;
 }
 
+
 .next_button {
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 5px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -352,3 +385,12 @@ input {
       color: #fff !important;
       margin-left: 55px !important;
     }
+h1{
+  text-align: center;
+  padding-top: 30px;
+}
+
+.howto{
+  padding: 2% 15% 6%;
+  line-height: 1.25rem;
+}
