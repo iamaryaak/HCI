@@ -10,10 +10,10 @@ body{
 
 .navbar-brand{
     font-size: 2.2rem;
-    padding-left: 20px;
 }
 
 /* make the search bar go to the end of nav bar */
+
 .searchBar {
     float: right;
     padding: 6px;
@@ -25,9 +25,11 @@ body{
 }
 
 .submissionfield {
-    padding: 10px;
     height: 500px;
-    width: 800px;
+    width: 1000px;
+    border: 1px solid #999999; 
+    padding: 10%; 
+    margin: 0;
 }
 
 .container{
@@ -238,7 +240,6 @@ input {
     background-color: #fff;
     display: flex;
     justify-content: center;
-
   }
   
   .progress-text {
