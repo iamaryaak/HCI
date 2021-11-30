@@ -11,6 +11,7 @@
     color: #ffffff;
     white-space: nowrap;
     z-index: 0;
+    border-radius: 8px;
 }
 
 .hbtn i {
@@ -1148,6 +1149,7 @@
 
 .hb-fill-top-rev-br:hover, .hb-fill-right-rev-br:hover, .hb-fill-bottom-rev-br:hover, .hb-fill-left-rev-br:hover, .hb-fill-on-rev-br:hover, .hb-fill-middle-rev-br:hover, .hb-fill-middle2-rev-br:hover {
     background: transparent;
+    border-radius: 8px;
     color: #130d0d;
     transition: color 0.3s ease,
     background 0s ease;
