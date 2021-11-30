@@ -152,6 +152,9 @@ body{
     padding: 10px;
     height: 500px;
     width: 800px;
+    border-radius: 8px;
+    border-color:#535474;
+    background-color: #F9F9F9;
 }
 
 .container{
@@ -218,9 +221,15 @@ body{
   }
 
 .container {
-    width: 600px;
+    width: 800px;
     margin: 20px auto;
 }
+
+.footer{
+  width: 800px;
+    margin: 20px auto;
+}
+
 .progressbar {
     counter-reset: step;
 }
@@ -494,8 +503,8 @@ input {
   }
 
   .button {
-    width: 130px;
-    height: 53px;
+    width: 222px;
+    height: 86px;
     border-radius: 8px;
 
     border: 3px solid #54A4AF;
