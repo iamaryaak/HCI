@@ -13,19 +13,32 @@
     <script src="test.js"></script>
     <title>Minerva</title>
 
-    <link rel="stylesheet" href="mobile.css">
 
 <style>
 
 .text-reading-levels {
-  width: 130px !important;
+  width: 165px !important;
   font-size: 16px !important;
-  line-height: 1.2;
+  line-height: 1.8;
+}
+
+.text-reading-levels-inactive {
+  width: 80px !important;
+  font-size: 16px !important;
+  line-height: 1.8;
+  color: #C4C4C4;
+}
+
+.text-reading-levels-inactive-last {
+  width: 200px !important;
+  font-size: 16px !important;
+  line-height: 1.8;
+  color: #C4C4C4;
 }
 
 .reading-level-container {
-    width: 342px;
-    height: 410px;
+    width: 340px;
+    height: 690px;
     margin-left: 50px;
   }
 
@@ -36,9 +49,7 @@
 
 .select-class-heading {
   margin-top: 100px;
-
-  height: 25px;
-
+  height: 20px;
   font-family: 'Work Sans', sans-serif;
   font-size: 20px;
   font-weight: 900;
@@ -50,39 +61,29 @@
 .class-block-blue {
   margin-top: 5px;
   margin-right: 10px;
-
-
-  height: 120px;
-  width: 150px;
+  height: 200px;
+  width: 300px;
   background-color: #535474;
-
   padding: 3px;
-
   font-family: 'Work Sans', sans-serif;
   font-size: 20px;
   font-weight: 900;
   color: white;
-
   display: inline-flex;
   align-items: flex-end;
-
   margin-bottom: 10px;
 }
 
 .class-block-grey {
   margin-top: 5px;
-
-  height: 120px;
-  width: 150px;
+  height: 200px;
+  width: 300px;
   background-color: #C4C4C4;
-
   padding: 3px;
-
   font-family: 'Work Sans', sans-serif;
   font-size: 20px;
   font-weight: 900;
   color: white;
-
   display: inline-flex;
   align-items: flex-end;
 }
@@ -94,18 +95,15 @@
 
 .form-control {
   line-height: 2;
-
   font-size: 14px;
   font-weight: 100;
-
   width: 100%;
-
   color: #535474;
   border: 0;
-
   padding-top: 7px;
   display: inline-flex;
   float: left;
+
 
 }
 
@@ -250,11 +248,13 @@ select::-ms-expand {
 
   <div class = "progress">
     <div class = "numberCircle grey"> 1 </div>
+    <div class = "text-reading-levels-inactive">Enter Text</div>
     <div class = "arrow-right"></div>
     <div class = "numberCircle blue"> 2 </div>
     <div class = "progress-text text-reading-levels">Select reading levels</div>
     <div class = "arrow-right"></div>
     <div class = "numberCircle grey"> 3 </div>
+    <div class = "text-reading-levels-inactive-last">Hand out Documents</div>
   </div>
 
   <div class="reading-level-container">
