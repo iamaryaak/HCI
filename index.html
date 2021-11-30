@@ -14,18 +14,31 @@
 </head>
 <body>
   <!-- Navigation Bar -->
-  <nav class="navbar topnav">
-    <!-- Image and text -->
-    <div class = "navbar-brand">
-      <a class="navbar-brand">
-        <a href="index.html"><img src="images/owlLogo.png" width="50" height="50" class="d-inline-block align-top" alt="">
-        Minerva
-        </a>
-        </a>
-        <div class="topnav-right">
-          <a href="how_to.html">How to Use</a>
-          <input class="searchBar" type="text" placeholder="Search...">
-        </div>
+  <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" hred="#"><img src="images/owlLogo.png" width="50" height="50" class="d-inline-block align-top" alt="">Minerva</a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!--        TODO add the hamburger icon-->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+
+          <ul class="navbar-nav mr-auto">
+              <!--           YOU CAN PUT ITEMS HERE IN THE FUTURE-->
+          </ul>
+          <nav class="navbar navbar-light" id="navbarSupportedContent">
+              <button class="btn btn-secondary my-2 my-sm-0" onclick="window.location.href='how_to.html'">How it Works</button>
+              <form class="form-inline">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+          </nav>
       </div>
   </nav>
 
