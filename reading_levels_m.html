@@ -14,6 +14,36 @@
     <title>Minerva</title>
 
     <link rel="stylesheet" href="mobile.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+$( document ).ready(function() {
+  console.log("here")
+  $('.button').click(function(e) {
+    console.log("here")
+    e.preventDefault();  //stop the browser from following
+    window.location.href = 'produce_documents.html';
+  });
+
+  $('.reading').click(function(){
+    $(this).removeClass('class-block-grey')
+    $(this).addClass('class-block-blue');
+    $('.esl').removeClass('class-block-blue')
+    $('.esl').addClass('class-block-grey')
+  });
+
+  $('.esl').click(function(){
+    $(this).removeClass('class-block-grey')
+    $(this).addClass('class-block-blue');
+    $('.reading').removeClass('class-block-blue')
+    $('.reading').addClass('class-block-grey')
+  });
+
+});
+</script>
+
 
 <style>
 
@@ -243,15 +273,17 @@ select::-ms-expand {
       <img src="images/owlLogo.png" width="48" height="48" class="d-inline-block align-top" alt="">
       Minerva
     </div>
+    <!--
     <div class = "header-search">
       &#8981;
     </div>
+    -->
   </div>
 
   <div class = "progress">
-    <div class = "numberCircle blue"> 1 </div>
+    <div class = "numberCircle grey"> 1 </div>
     <div class = "arrow-right"></div>
-    <div class = "numberCircle grey"> 2 </div>
+    <div class = "numberCircle blue"> 2 </div>
     <div class = "progress-text text-reading-levels">Select reading levels</div>
     <div class = "arrow-right"></div>
     <div class = "numberCircle grey"> 3 </div>
@@ -261,11 +293,11 @@ select::-ms-expand {
     <div class="select-class-heading">
       Select class
     </div>
-    <div class="class-block-blue">
+    <div class="class-block-blue reading">
       READING 215
     </div>
 
-    <div class="class-block-grey">
+    <div class="class-block-grey esl">
       ESL 201
     </div>
 
