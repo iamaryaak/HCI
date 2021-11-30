@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="test.js"></script>
+    <title>Minerva</title>
+
+    <link rel="stylesheet" href="mobile.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+  $( document ).ready(function() {
+    $('.next').click(function() {
+      window.location.href = 'reading_levels_m.html';
+    });
+
+    $('.import').click(function() {
+      $('#file').trigger('click');
+    });
+  });
+</script>
+
+</head>
+<body>
+
+  <div class = "header">
+    <div class = "header-text">
+      <img src="../images/owlLogo.png" width="48" height="48" class="d-inline-block align-top" alt="">
+      Minerva
+    </div>
+    <!--
+    <div class = "header-search">
+      &#8981;
+    </div>
+    -->
+  </div>
+
+  <div class = "progress">
+    <div class = "numberCircle blue"> 1 </div>
+    <div class = "progress-text">Enter text</div>
+    <div class = "arrow-right"></div>
+    <div class = "numberCircle grey"> 2 </div>
+    <div class = "arrow-right"></div>
+    <div class = "numberCircle grey"> 3 </div>
+  </div>
+
+  <div class="scaffold-input">
+    <textarea class="scaffold" placeholder="Type or paste the text you would like scaffolded..."></textarea>
+  </div>
+
+  <div class="button small-text import">
+      IMPORT<br>TEXT
+  </div>  
+  <div class="button button-fill next">
+      NEXT
+  </div>
+
+  <input type="file" id="file" style="display:none" />
+
+  <a href="mobile/reading_levels_m.html" style="display:none"></a>
+
+</body>
+</html>

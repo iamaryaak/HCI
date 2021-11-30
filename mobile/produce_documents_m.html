@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Minerva</title>
+
+    <link rel="stylesheet" href="mobile.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--<script src="js/functions.js"></script>-->
+
+<script>
+$( document ).ready(function() {
+  $('.button').click(function(e) {
+    e.preventDefault();  //stop the browser from following
+    window.location.href = 'sample.docx';
+  });
+
+});
+</script>
+
+<style>
+
+.text-reading-levels {
+  width: 130px !important;
+  font-size: 16px !important;
+  line-height: 1.2;
+}
+
+.produce-documents-container {
+    width: 342px;
+    height: 365px;
+
+    margin-left: 10px;
+    padding: 10px;
+    padding-top: 90px;
+
+    text-align: center;
+
+    color: #535474;
+
+    font-size: 17px;
+    font-weight: 100;
+}
+
+
+select {
+  /* Reset Select */
+  appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  line-height: 1;
+  display: inline-block;
+  flex: 1;
+  padding-left: 13px;
+
+  color: #535474;
+  font-size: 24px;
+  border: 3px solid #54A4AF;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 57px;
+
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select wrapper */
+.select {
+  position: relative;
+  display: inline-flex;
+  width: 292px;
+  height: 67px;
+  height: 3em;
+  border-radius: 5px;
+  line-height: 1.5;
+  top: -5px;
+  margin-top: 50px;
+
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 0 5px 5px 0;
+  font-size: 24px;
+  background-color: #54A4AF;
+  transition: .25s all ease;
+  pointer-events: none;
+}
+/* Transition */
+.select:hover::after {
+  color: #white;
+}
+
+.button {
+  margin-top: 25px;
+  margin-left: 113px !important;
+  width: 145px;
+  height: 53px;
+  font-size: 28px;
+  position: center;
+}
+
+.checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #7ac142;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark {
+    width: 94px;
+    height: 94px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    margin: 1% auto;
+    box-shadow: inset 0px 0px 0px #7ac142;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+.checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+</style>
+
+</head>
+<body>
+
+  <div class = "header">
+    <div class = "header-text">
+      <img src="../images/owlLogo.png" width="48" height="48" class="d-inline-block align-top" alt="">
+      Minerva
+    </div>
+    <!--
+    <div class = "header-search">
+      &#8981;
+    </div>
+    -->
+  </div>
+
+  <div class = "progress">
+    <div class = "numberCircle grey"> 1 </div>
+    <div class = "arrow-right"></div>
+    <div class = "numberCircle grey"> 2 </div>
+    <div class = "arrow-right"></div>
+    <div class = "numberCircle blue"> 3 </div>
+    <div class = "progress-text text-reading-levels">Hand out documents</div>
+  </div>
+
+  <div class="produce-documents-container">
+
+    <div class="checkmark">
+        <img src="checkmark.png" width="94" height="94">
+    </div>
+
+    <p>Scaffolding complete. Your documents are ready to be handed out!</p>
+
+    <div class="select">
+      <select>
+        <option value="1">E-mail to class</option>
+        <option value="2">Download</option>
+        <option value="3">Add to calendar</option>
+      </select>
+    </div> 
+
+  </div>
+  <div class="button button-fill">
+    SUBMIT
+  </div> 
+
+
+</body>
+</html>
