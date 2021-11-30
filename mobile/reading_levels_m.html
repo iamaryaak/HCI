@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="test.js"></script>
+    <title>Minerva</title>
+
+    <link rel="stylesheet" href="mobile.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+$( document ).ready(function() {
+  console.log("here")
+  $('.button').click(function(e) {
+    console.log("here")
+    e.preventDefault();  //stop the browser from following
+    window.location.href = 'produce_documents.html';
+  });
+
+  $('.reading').click(function(){
+    $(this).removeClass('class-block-grey')
+    $(this).addClass('class-block-blue');
+    $('.esl').removeClass('class-block-blue')
+    $('.esl').addClass('class-block-grey')
+  });
+
+  $('.esl').click(function(){
+    $(this).removeClass('class-block-grey')
+    $(this).addClass('class-block-blue');
+    $('.reading').removeClass('class-block-blue')
+    $('.reading').addClass('class-block-grey')
+  });
+
+});
+</script>
+
+
+<style>
+
+.text-reading-levels {
+  width: 130px !important;
+  font-size: 16px !important;
+  line-height: 1.2;
+}
+
+.reading-level-container {
+    width: 342px;
+    height: 410px;
+
+    margin-left: 10px;
+  }
+
+.classes {
+  width: 100%;
+  height: 
+}
+
+.select-class-heading {
+  margin-top: 10px;
+
+  height: 25px;
+
+  font-family: 'Work Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  color: #535474;
+  
+  margin-bottom: 8px;
+}
+
+.class-block-blue {
+  margin-top: 5px;
+  margin-right: 10px;
+
+
+  height: 120px;
+  width: 150px;
+  background-color: #535474;
+
+  padding: 3px;
+
+  font-family: 'Work Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  color: white;
+
+  display: inline-flex;
+  align-items: flex-end;
+
+  margin-bottom: 10px;
+}
+
+.class-block-grey {
+  margin-top: 5px;
+
+  height: 120px;
+  width: 150px;
+  background-color: #C4C4C4;
+
+  padding: 3px;
+
+  font-family: 'Work Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  color: white;
+
+  display: inline-flex;
+  align-items: flex-end;
+}
+
+.radio-button-container {
+  height: 225px;
+
+  border: 1px solid red;
+}
+
+.form-control {
+  line-height: 2;
+
+  font-size: 14px;
+  font-weight: 100;
+
+  width: 100%;
+
+  color: #535474;
+  border: 0;
+
+  padding-top: 7px;
+  
+  display: inline-flex;
+  float: left;
+
+}
+
+.form-control + .form-control {
+  margin-top: 10px;
+}
+
+.form-control:focus-within {
+  color: var(--form-control-color);
+}
+
+input[type="radio"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  /* Remove most all native input styles */
+  appearance: none;
+  /* For iOS < 15 */
+  background-color: var(--form-background);
+  /* Not removed via appearance */
+  margin-right: 0;
+
+  font: inherit;
+  color: #535474;
+  width: 25px;
+  height: 25px;
+  border: 2px solid #535474;
+  border-radius: 50%;
+
+  margin-right: 5px;
+
+  display: grid;
+  place-content: center;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  /* Windows High Contrast Mode */
+  background-color: #54A4AF;
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
+select {
+  /* Reset Select */
+  appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  line-height: 1;
+  display: inline-block;
+  flex: 1;
+  padding-left: 13px;
+  color: #535474;
+  font-size: 16px;
+  border: 1px solid #535474;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select wrapper */
+.select {
+  position: relative;
+  display: inline-flex;
+  width: 55px;
+  height: 3em;
+  border-radius: 5px;
+  line-height: 1.5;
+  top: -5px;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 0 5px 5px 0;
+  background-color: #535474;
+  transition: .25s all ease;
+  pointer-events: none;
+}
+/* Transition */
+.select:hover::after {
+  color: #white;
+}
+
+.adjust-manually-link {
+  color: #54A4AF;
+  font-size: 14px;
+  text-decoration: underline;
+  height: 50px;
+  width: 100%;
+  display: block;
+  padding-top: 10px;
+}
+  .adjust-manually-link:hover {
+    cursor: pointer;
+  }
+
+
+.float-right{
+  float: right;
+  margin-right: 21px;
+}
+
+.form-container {
+  height: 150px;
+}
+
+</style>
+
+</head>
+<body>
+
+  <div class = "header">
+    <div class = "header-text">
+      <img src="images/owlLogo.png" width="48" height="48" class="d-inline-block align-top" alt="">
+      Minerva
+    </div>
+    <!--
+    <div class = "header-search">
+      &#8981;
+    </div>
+    -->
+  </div>
+
+  <div class = "progress">
+    <div class = "numberCircle grey"> 1 </div>
+    <div class = "arrow-right"></div>
+    <div class = "numberCircle blue"> 2 </div>
+    <div class = "progress-text text-reading-levels">Select reading levels</div>
+    <div class = "arrow-right"></div>
+    <div class = "numberCircle grey"> 3 </div>
+  </div>
+
+  <div class="reading-level-container">
+    <div class="select-class-heading">
+      Select class
+    </div>
+    <div class="class-block-blue reading">
+      READING 215
+    </div>
+
+    <div class="class-block-grey esl">
+      ESL 201
+    </div>
+
+    <div class="select-class-heading">
+      Scaffold reading levels to...
+    </div>
+
+    <form action="" class="form-container">
+      <label class="form-control">
+        <input type="radio" name="radio" />
+        Lower all reading levels by &nbsp; <div class="select">
+                                      <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                      </select>
+                                    </div>
+      </label>
+
+ 
+      <label class="form-control">
+        <input type="radio" name="radio" checked/>
+        Keep current reading levels
+      </label>
+
+      <label class="form-control">
+        <input type="radio" name="radio" />
+        Raise all reading levels by &nbsp;&nbsp; <div class="select">
+          <select>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+      </label>
+    </form>
+
+    <div class="adjust-manually-link">
+      Adjust each student’s reading level individually
+    </div>
+
+  </div>
+  
+  <div class="button button-fill float-right">
+      NEXT
+  </div>
+
+
+</body>
+</html>
