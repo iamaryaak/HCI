@@ -13,7 +13,29 @@
     <script src="test.js"></script>
     <title>Minerva</title>
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $( document ).ready(function() {
+        console.log("here")
+        $('.button').click(function(e) {
+          console.log("here")
+          e.preventDefault();  //stop the browser from following
+          window.location.href = 'produce_documents.html';
+        });
+        $('.reading').click(function(){
+          $(this).removeClass('class-block-grey')
+          $(this).addClass('class-block-blue');
+          $('.esl').removeClass('class-block-blue')
+          $('.esl').addClass('class-block-grey')
+        });
+        $('.esl').click(function(){
+          $(this).removeClass('class-block-grey')
+          $(this).addClass('class-block-blue');
+          $('.reading').removeClass('class-block-blue')
+          $('.reading').addClass('class-block-grey')
+        });
+      });
+      </script>
 <style>
 
 .text-reading-levels {
@@ -37,8 +59,8 @@
 }
 
 .reading-level-container {
-    width: 340px;
-    height: 690px;
+    width: 1000px;
+    height: 500px;
     margin-left: 50px;
   }
 
@@ -48,7 +70,7 @@
 }
 
 .select-class-heading {
-  margin-top: 100px;
+  margin-top: 60px;
   height: 20px;
   font-family: 'Work Sans', sans-serif;
   font-size: 20px;
@@ -232,7 +254,7 @@ select::-ms-expand {
 
 </head>
 <body>
-
+  
     <nav class="navbar">
         <!-- Image and text -->
         <div class = "navbar-brand">
@@ -261,11 +283,11 @@ select::-ms-expand {
     <div class="select-class-heading">
       Select class
     </div>
-    <div class="class-block-blue">
+    <div  class="class-block-blue reading">
       READING 215
     </div>
 
-    <div class="class-block-grey">
+    <div  class="class-block-grey esl">
       ESL 201
     </div>
 
@@ -302,14 +324,14 @@ select::-ms-expand {
         </div>
       </label>
     </form>
+    <div button id="next-btn"  class="next_button next_button1">
+      NEXT
+  </div>
 
     <div class="adjust-manually-link">
       Adjust each student’s reading level individually
     </div>
 
-  </div>
-  <div button id="next-btn"  class="next_button next_button1">
-      NEXT
   </div>
 
 
