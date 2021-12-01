@@ -1,4 +1,3 @@
-<!-- Boiler plate code for each page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,113 +5,686 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="CSS/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="test.js"></script>
     <title>Minerva</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $( document ).ready(function() {
+        console.log("here")
+        $('.button').click(function(e) {
+          console.log("here")
+          e.preventDefault();  //stop the browser from following
+          window.location.href = 'produce_documents.html';
+        });
+        $('.reading').click(function(){
+          $(this).removeClass('class-block-grey')
+          $(this).addClass('class-block-blue');
+          $('.esl').removeClass('class-block-blue')
+          $('.esl').addClass('class-block-grey')
+        });
+        $('.esl').click(function(){
+          $(this).removeClass('class-block-grey')
+          $(this).addClass('class-block-blue');
+          $('.reading').removeClass('class-block-blue')
+          $('.reading').addClass('class-block-grey')
+        });
+      });
+      </script>
+<style>
+
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+
+.navbar{
+    background-color: #535474;
+    padding: 10px 15px;
+    color: white;
+}
+
+.navbar-brand{
+    font-size: 2.2rem;
+    padding-left: 20px;
+}
+
+/* make the search bar go to the end of nav bar */
+.searchBar {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    border: 1px solid #ccc;
+}
+
+.submissionfield {
+    padding: 10px;
+    height: 500px;
+    width: 800px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.container {
+    width: 600px;
+    margin: 100px auto;
+}
+.progressbar {
+    counter-reset: step;
+}
+.progressbar li {
+    list-style-type: none;
+    width: 25%;
+    float: left;
+    font-size: 18px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    color: #7d7d7d;
+}
+.progressbar li:before {
+    width: 30px;
+    height: 30px;
+    content: counter(step);
+    counter-increment: step;
+    line-height: 30px;
+    border: 2px solid #7d7d7d;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    background-color: white;
+}
+.progressbar li:after {
+    width: 100%;
+    height: 2px;
+    content: '';
+    position: absolute;
+    background-color: #7d7d7d;
+    top: 15px;
+    left: -50%;
+    z-index: -1;
+}
+.progressbar li:first-child:after {
+    content: none;
+}
+.progressbar li.active {
+    color: green;
+}
+.progressbar li.active:before {
+    border-color: #55b776;
+}
+.progressbar li.active + li:after {
+    background-color: #55b776;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+
+  .sub-head {
+    color: grey;
+    font-size: 18px;
+  }
+
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #535474;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .card button:hover {
+    opacity: 0.7;
+  }
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #535474;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: #535474 ;}
+
+p,
+label {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input {
+    margin: .4rem;
+}
+
+.next_button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-right: 21px;
+  }
+
+  .next_button1 {background-color: #54A4AF;}
+
+  .next_button1:hover {
+    background-color: #54A4AF;
+    color: white;
+  }
+
+  .card-wrapper {
+      position: relative;
+      width: 50vw;
+      display: grid;
+      grid-template-columns: auto auto;
+      column-gap: 20px;
+      left: 20vw;
+  }
+  .card {
+      position: relative;
+      width: 100%;
+  }
+
+#next-btn {
+      position: absolute;
+     margin-right: 21px;
+      right: 0%;
+      border-radius: 8px;
+      text-align: center;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 30px;
+      font-weight: 1000;
+}
+
+.submissionfield {
+    padding: 10px;
+    height: 500px;
+    width: 800px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    
+}
+
+.progress {
+    margin-top: 30px;
+    margin-bottom: 8px;
+    height: 38px;
+    width: 100%;
+    padding: 3px;
+    padding-left: 10px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+
+  }
+  
+  .progress-text {
+    color: #535474;
+    width: 120px;
+  
+    font-family: 'Work Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+  
+    float: left;
+  }
+  
+  .numberCircle {
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+  
+      color: #fff;
+      text-align: center;
+  
+      font-family: 'Work Sans', sans-serif;
+      font-size: 22px;
+      font-weight: 900;
+  
+      margin-left: 10px;
+      margin-right: 10px;
+  
+      float: left
+  }
+    .blue {
+      background: #535474;
+    }
+    .grey {
+      background: #C4C4C4;
+    }
+  
+  .arrow-right {
+    width: 0; 
+    height: 0; 
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    
+    border-left: 13px solid #C4C4C4;
+  
+    float: left;
+    
+    margin-left: 5px;
+  }
+  
+  .scaffold {
+    width: 332px;
+    height: 410px;
+    border-radius: 10px;
+  
+    border: 3px solid #535474;
+    margin-left: 8px;
+  
+    font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    color: #535474;
+  }
+  
+  .red-border {
+    border: 1px solid red;
+  }
+  
+  .button {
+    width: 130px;
+    height: 53px;
+    border-radius: 8px;
+  
+    border: 3px solid #54A4AF;
+  
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 1000;
+    color: #54A4AF;
+  
+    float: left;
+    margin-left: 17px;
+    margin-top: 5px;
+  
+  }
+/*button to match figma*/
+  .button {
+    width: 130px;
+    height: 53px;
+    border-radius: 8px;
+  
+    border: 3px solid #54A4AF;
+  
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 1000;
+    color: #54A4AF;
+  
+    float: left;
+    margin-left: 17px;
+    margin-top: 5px;
+  
+  }
+  
+    .button-fill {
+      background-color: #54A4AF;
+      color: #fff !important;
+      margin-left: 55px !important;
+    }
+
+.text-reading-levels {
+  width: 165px !important;
+  font-size: 16px !important;
+  line-height: 1.8;
+}
+
+.text-reading-levels-inactive {
+  width: 80px !important;
+  font-size: 16px !important;
+  line-height: 1.8;
+  color: #C4C4C4;
+}
+
+.text-reading-levels-inactive-last {
+  width: 200px !important;
+  font-size: 16px !important;
+  line-height: 1.8;
+  color: #C4C4C4;
+}
+
+.reading-level-container {
+    width: 1000px;
+    height: 500px;
+    margin-left: 410px;
+  }
+
+.classes {
+  width: 100%;
+  height: 50%
+}
+
+.select-class-heading {
+  margin-top: 60px;
+  height: 20px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  color: #535474;
+  margin-bottom: 8px;
+  margin-left: 00px;
+}
+
+.class-block-blue {
+  margin-top: 5px;
+  margin-right: 10px;
+  height: 200px;
+  width: 300px;
+  background-color: #535474;
+  padding: 3px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  color: white;
+  display: inline-flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+.class-block-grey {
+  margin-top: 5px;
+  height: 200px;
+  width: 300px;
+  background-color: #C4C4C4;
+  padding: 3px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  color: white;
+  display: inline-flex;
+  align-items: flex-end;
+}
+
+.radio-button-container {
+  height: 225px;
+  border: 1px solid red;
+}
+
+.form-control {
+  line-height: 2;
+  font-size: 14px;
+  font-weight: 100;
+  width: 100%;
+  color: #535474;
+  border: 0;
+  padding-top: 7px;
+  display: inline-flex;
+  float: left;
+
+
+}
+
+.form-control + .form-control {
+  margin-top: 10px;
+}
+
+.form-control:focus-within {
+  color: var(--form-control-color);
+}
+
+input[type="radio"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  /* Remove most all native input styles */
+  appearance: none;
+  /* For iOS < 15 */
+  background-color: var(--form-background);
+  /* Not removed via appearance */
+  margin-right: 0;
+
+  font: inherit;
+  color: #535474;
+  width: 25px;
+  height: 25px;
+  border: 2px solid #535474;
+  border-radius: 50%;
+
+  margin-right: 5px;
+
+  display: grid;
+  place-content: center;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  /* Windows High Contrast Mode */
+  background-color: #54A4AF;
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
+select {
+  /* Reset Select */
+  appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  line-height: 1;
+  display: inline-block;
+  flex: 1;
+  padding-left: 13px;
+  color: #535474;
+  font-size: 16px;
+  border: 1px solid #535474;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select wrapper */
+.select {
+  position: relative;
+  display: inline-flex;
+  width: 55px;
+  height: 3em;
+  border-radius: 5px;
+  line-height: 1.5;
+  top: -5px;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 0 5px 5px 0;
+  background-color: #535474;
+  transition: .25s all ease;
+  pointer-events: none;
+}
+/* Transition */
+.select:hover::after {
+  color: white;
+}
+
+.adjust-manually-link {
+  color: #54A4AF;
+  font-size: 14px;
+  text-decoration: underline;
+  height: 50px;
+  width: 100%;
+  display: block;
+  padding-top: 10px;
+}
+  .adjust-manually-link:hover {
+    cursor: pointer;
+  }
+
+
+.float-right{
+  float: right;
+  margin-right: 21px;
+}
+
+.form-container {
+  height: 150px;
+}
+
+</style>
+
 </head>
 <body>
- <!-- Navigation Bar -->
- <nav class="navbar navbar-expand-lg">
-     <a href="index.html" class="navbar-brand text-white" >
-         <img src="images/owlLogo.png" width="50" height="50" class="d-inline-block align-top" alt="">
-         Minerva</a>
+  
+    <nav class="navbar">
+        <!-- Image and text -->
+        <div class = "navbar-brand">
+          <a class="navbar-brand">
+            <img src="images/owlLogo.png" width="50" height="50" class="d-inline-block align-top" alt="">
+            Minerva
+            </a>
+        </div>
+        <div>
+            <input class="searchBar" type="text" placeholder="Search...">
+        </div>
+      </nav>
 
-     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
-     </button>
-
-
-     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-         <!--        TODO add the hamburger icon-->
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-             <span class="navbar-toggler-icon"></span>
-         </button>
-
-
-         <ul class="navbar-nav mr-auto">
-             <!--           YOU CAN PUT ITEMS HERE IN THE FUTURE-->
-         </ul>
-         <nav class="navbar navbar-light" id="navbarSupportedContent">
-             <button class="btn btn-secondary my-2 my-sm-0" onclick="window.location.href='how_to.html'">How it Works</button>
-             <!--              <form class="form-inline">-->
-             <!--                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
-             <!--              </form>-->
-         </nav>
-     </div>
- </nav>
-
-  <div class = "container">
+  <div class = "progress">
     <div class = "numberCircle grey"> 1 </div>
-    <div class = "progress-text">Enter Text</div>
+    <div class = "text-reading-levels-inactive">Enter Text</div>
     <div class = "arrow-right"></div>
     <div class = "numberCircle blue"> 2 </div>
-    <div class = "progress-text">Select Reading Levels</div>
+    <div class = "progress-text text-reading-levels">Select reading levels</div>
     <div class = "arrow-right"></div>
     <div class = "numberCircle grey"> 3 </div>
-    <div class = "progress-text">Hand Out Documents</div>
-</div>
+    <div class = "text-reading-levels-inactive-last">Hand out Documents</div>
+  </div>
 
-  <div class="card-wrapper">
-    <div class="card">
-      <h3>READING 215</h3>
-      <p class="sub-head">Tuesday 5 PM</p>
-      <p>Class Details</p>
-      <p><button>Select Class</button></p>
+  <div class="reading-level-container">
+    <div class="select-class-heading">
+      Select class
     </div>
-    <div class="card">
-      <h3>ESL</h3>
-      <p class="sub-head">Wednesday 3 PM</p>
-      <p>Class Details</p>
-      <p><button>Select Class</button></p>
+    <div  class="class-block-blue reading">
+      READING 215
     </div>
-  </div>
 
-  <div>
-    <p>Set Scafholding Level to ..</p>
-    <input type="radio" id="huey" name="drone" value="huey"
-           checked>
-    <label for="huey">Lower reading level of students by <div class="dropdown">
-      <button class="dropbtn">Reading Level</button>
-      <div class="dropdown-content">
-        <a href="#">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-      </div>
-    </div> </label>
-  </div>
+    <div  class="class-block-grey esl">
+      ESL 201
+    </div>
 
-  <div>
-    <input type="radio" id="huey" name="drone" value="huey"
-           checked>
-    <label for="huey">Keep the same reading level  </label>
-  </div>
+    <div class="select-class-heading">
+      Scaffold reading levels to...
+    </div>
 
-  <div>
-    <input type="radio" id="huey" name="drone" value="huey"
-           checked>
-    <label for="huey">Raise reading level of students by <div class="dropdown">
-      <button class="dropbtn">Reading Level</button>
-      <div class="dropdown-content">
-        <a href="#">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-      </div>
-    </div> </label>
-  </div>
+    <form action="" class="form-container">
+      <label class="form-control">
+        <input type="radio" name="radio" />
+        Lower all reading levels by &nbsp; <div class="select">
+                                      <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                      </select>
+                                    </div>
+      </label>
 
-  <!--<a href="starting_page.html"><button id="next-btn"  class="next_button next_button1">Next</button></a>--->
-  <!--<div class="button button-fill float-right">
-    NEXT
-  </div>
+      <label class="form-control">
+        <input type="radio" name="radio" checked/>
+        Keep current reading levels
+      </label>
 
-  <!--New button, to keep same, change to print pages-->
-  <a href="produce_documents.html"><button id="next-btn" class="next_button next_button1 button-fill float-right">Next</button></a>
+      <label class="form-control">
+        <input type="radio" name="radio" />
+        Raise all reading levels by &nbsp;&nbsp; <div class="select">
+          <select>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+      </label>
+    </form>
+    <div class="adjust-manually-link">
+      Adjust each student’s reading level individually
+    </div>
+
+      <a href=select_reading_level.html><button style="margin-right: 410px;" id="next-btn" class="next_button next_button1 button-fill float-right">Next</button></a>
+
+
+  </div>
 
 
 </body>
-
 </html>
