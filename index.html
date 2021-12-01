@@ -59,7 +59,25 @@
     </form>
   </div>
 
-  <a href="Selecting_levels(older).html"><button id="next-btn" class="next_button next_button1 button-fill float-right">Next</button></a>
-  <a href="mobile/index_m.html" style="display: none"></a>
-  </body>
+  <script>
+      function importData() {
+  let input = document.createElement('input');
+  input.type = 'file';
+  input.onchange = _ => {
+    // you can use this method to get file and perform respective operations
+            let files =   Array.from(input.files);
+            console.log(files);
+        };
+  input.click();
+  
+}
+  </script>
+
+  <div class = "container" style="padding-bottom: 100px;">
+    <button style="margin-right: 450px;" id="next-btn" class="next_button next_button1 button-fill float-right" onclick="importData()">Import Text</button>    
+    <a href=Selecting_levels(older).html><button style="margin-right: 320px;" id="next-btn" class="next_button next_button1 button-fill float-right">Next</button></a>
+  </div>
+
+
+</body>
 </html>
